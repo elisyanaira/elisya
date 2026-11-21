@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal RPL SMKN 9 Medan - Responsive Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">
+                <img src="images/logo-smkn9-medan.jpg" alt="Logo SMKN 9 Medan" class="header-logo">
+                <img src="images/logo-rpl.jpg" alt="Logo RPL" class="header-logo">
+                <span>RPL SMKN 9 MEDAN</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#">Beranda</a>
+                <a href="#">Kurikulum</a>
+                <a href="#">Karya Siswa</a>
+                <a href="#">Kontak</a>
+            </nav>
+            <button class="hamburger-btn" aria-label="Menu">&#9776;</button>
+        </header>
+
+        <!-- SIDEBAR KIRI (Dihilangkan di Smartphone) -->
+        <aside class="sidebar-kiri">
+            <h3>Menu Cepat</h3>
+            <ul>
+                <li>Jadwal Praktikum</li>
+                <li>Modul Pemrograman Web</li>
+                <li>Daftar Lab RPL</li>
+                <li>Info PKL &amp; LSP</li>
+            </ul>
+        </aside>
+
+        <!-- KONTEN UTAMA -->
+        <main class="konten-utama">
+            <h2>Berita &amp; Proyek Terbaru Kelas XII RPL</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Ilustrasi pengembangan aplikasi" class="card-image">
+                    <h4>Aplikasi Inventaris QR</h4>
+                    <p>Sistem peminjaman alat laboratorium berbasis web responsif dengan pemindai QR Code.</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Laptop untuk ujian komputer" class="card-image">
+                    <h4>Portal CBT Online</h4>
+                    <p>Platform ujian berbasis komputer yang adaptif pada desktop lab maupun smartphone.</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Produk kreatif dan desain" class="card-image">
+                    <h4>E-Katalog Produk PKK</h4>
+                    <p>Etalase digital karya kreatif siswa jurusan Rekayasa Perangkat Lunak.</p>
+                    <p class="card-price">Rp 25.000</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Ilustrasi aplikasi kasir digital" class="card-image">
+                    <h4>Aplikasi Kasir Digital</h4>
+                    <p>Aplikasi kasir berbasis web untuk mencatat transaksi dan mencetak struk penjualan.</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Ilustrasi website profil sekolah" class="card-image">
+                    <h4>Website Profil Sekolah</h4>
+                    <p>Situs informasi sekolah yang menampilkan jurusan, galeri, dan berita terbaru.</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Ilustrasi game edukasi interaktif" class="card-image">
+                    <h4>Game Edukasi Interaktif</h4>
+                    <p>Permainan belajar interaktif untuk melatih logika pemrograman dasar siswa.</p>
+                </article>
+            </div>
+        </main>
+
+        <!-- WIDGET PROMO KANAN (Dihilangkan di Tablet & Smartphone) -->
+        <aside class="widget-promo">
+            <h3>Info &amp; Promo Lab</h3>
+            <div class="promo-box">
+                <strong>Uji Kompetensi LSP!</strong>
+                <p>Persiapkan portofolio web responsif kalian sebelum jadwal asesmen.</p>
+            </div>
+        </aside>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>&copy; 2026 Jurusan RPL SMK Negeri 9 Medan</p>
+        </footer>
+    </div>
+
+    <!-- CHATBOT -->
+    <button class="chat-toggle" id="chatToggle" aria-label="Buka chatbot" aria-expanded="false">&#128172;</button>
+
+    <section class="chatbot" id="chatbot" aria-label="Chatbot Asisten RPL" hidden>
+        <div class="chat-header">
+            <div>
+                <strong>Asisten SMKN 9 Medan</strong>
+            </div>
+            <div class="chat-actions">
+                <button class="chat-reset" id="chatReset" aria-label="Mulai ulang percakapan" title="Mulai ulang">&#8634;</button>
+                <button class="chat-close" id="chatClose" aria-label="Tutup chatbot">&#10005;</button>
+            </div>
+        </div>
+        <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+        <div class="chat-chips" id="chatChips">
+            <button type="button">Jadwal praktikum</button>
+            <button type="button">Modul web</button>
+            <button type="button">Info PKL</button>
+            <button type="button">Uji LSP</button>
+        </div>
+        <div class="chat-form">
+            <input type="text" id="chatInput" placeholder="Tulis pertanyaan..." autocomplete="off" maxlength="200">
+            <button type="button" id="chatSend" aria-label="Kirim">&#10148;</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
